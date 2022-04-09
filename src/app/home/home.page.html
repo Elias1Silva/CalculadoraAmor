@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title id="Titulo">
+      Calculadora do Amor
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,23 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item>
+      <ion-label>Pessoa 1 =</ion-label>
+      <ion-input type="text" [(ngModel)] = "nome1" id="pessoa"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pessoa 2 =</ion-label>
+      <ion-input type="text" [(ngModel)] = "nome2" id="pessoa"></ion-input>
+    </ion-item>
+    <div class="ion-text-center">
+    <ion-item>
+      <ion-button (click)="enviarDados()" id="Butao" >Testar compatibilidade</ion-button>
+    </ion-item>
+  </div>
+  <div class="ion-text-center output-wrapper">
+    <ion-icon name="heart" color="danger" slot="middle" class="heart-icon"></ion-icon>
+    <div [class.ping] = "load">{{resultado}}%</div>
+    {{relacao}}
+  </div>
   </div>
 </ion-content>

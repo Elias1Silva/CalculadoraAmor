@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -24,4 +23,83 @@
 
 #container a {
   text-decoration: none;
+}
+
+#Titulo{
+  text-align: center;
+  font-style: italic;
+  font-family: Georgia;
+  font-size: 175%;
+  color: crimson;
+  background-color: black;
+}
+
+#butao {
+  padding-left: 0%;
+  margin-right: 0%;
+  
+
+}
+
+.rotate-scale-up {
+  -webkit-animation: rotate-scale-up 0.65s infinite both;
+  animation: rotate-scale-up 0.65s infinite both;
+}
+
+@-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+.ping {
+  animation: ping 1.8s ease-in-out infinite both;
+}
+
+@keyframes ping {
+  0% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: scale(2.0);
+    transform: scale(2.0);
+    opacity: 0.5;
+  }
 }
